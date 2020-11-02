@@ -140,13 +140,13 @@
           "options": {
             "tsConfig": "projects/toast-ui-image-editor/tsconfig.lib.json",
             "project": "projects/toast-ui-image-editor/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "projects/toast-ui-image-editor/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -170,5 +170,8 @@
       }
     }
   },
-  "defaultProject": "toast-ui-image-editor-demo"
+  "defaultProject": "toast-ui-image-editor-demo",
+  "cli": {
+    "analytics": false
+  }
 }
