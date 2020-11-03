@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
 
 import { ToastUiImageEditorComponent } from "projects/toast-ui-image-editor/src/public_api";
-import { toBase64String } from "@angular/compiler/src/output/source_map";
 
 @Component({
   selector: "app-root",
@@ -18,14 +17,18 @@ export class AppComponent implements AfterViewInit {
     includeUI: {
       menuBarPosition: 'right',
       menu: ['shape'],
+      initMenu: 'shape',
+      loadImage: {
+        path: '/assets/2222.jpg',
+        name: 'p01'
+      },
     },
   };
 
+  public includeUI = true;
 
   ngAfterViewInit(): void {
-    this.editor.editorInstance.addImageObject('https://www.autotronic.com.tw/images/p3-products/p01.png').then(r => {
-      console.log(r);
-    });
+
   }
 
 }
